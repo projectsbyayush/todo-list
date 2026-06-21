@@ -2,6 +2,10 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 1000;
     font-size: 15px;
+    ::selection{
+        color: #000000;
+        background-color: #8abcff;
+    }
 }
 body{
     display: flex;
@@ -20,6 +24,7 @@ body{
     border-radius: 2rem;
     box-shadow: 16px 16px 32px rgba(110, 68, 180, 0.25),inset 8px 8px 16px rgba(255, 255, 255, 0.8),
     inset -8px -8px 16px rgba(110, 68, 180, 0.2);
+    overflow: hidden;
 }
 .inside{
     width: 20rem;
@@ -68,4 +73,38 @@ body{
 }
 #add-btn:active{
     box-shadow: inset 8px 8px 16px rgba(110, 68, 180, 0.25), inset -4px -4px 8px rgba(255, 255, 255, 0.6);
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+}
+.task-list li{
+    background-color: #eaeaea;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    list-style: none;
+    color: black;
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 8px 8px 16px rgba(110, 68, 180, 0.25), inset 4px 4px 8px rgba(255, 255, 255, 0.8),
+    inset -4px -4px 8px rgba(110, 68, 180, 0.2);
+}
+.task-list li button{
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 8px rgba(110, 68, 180, 0.25), inset 2px 2px 4px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 4px rgba(180, 50, 50, 0.3);
+}
+.task-list li button:active{
+    box-shadow: inset 4px 4px 8px rgba(110, 68, 180, 0.25), inset -2px -2px 4px rgba(255, 255, 255, 0.6);
 }
